@@ -1,3 +1,6 @@
+VSCode IDE + TGDS Support:
+![ToolchainGenericDS](img/vscodeide.png)
+
 Features:
 
 - C++ IDE with Intellisense support 
