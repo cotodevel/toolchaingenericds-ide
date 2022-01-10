@@ -17,12 +17,11 @@ https://bitbucket.org/Coto88/newlib-nds
 Once installed you should have MSYS2 available (required)
 
 Download & Install latest VSCode 
-Install these extensiones:
-- ARM Extension C/C++ C++ Intellisense
+Then install these extensions (Extensions block icon):
 - C/C++
 - C/C++ Extension Pack
-- C++ Instellisense
-- ARM support for Visual Studio Code
+- C++ Intellisense
+- Arm Assembly
 
 Open VSCode -> File -> Preferences -> Settings -> Open Settings (JSON). Clean the entire JSON and copy/paste the below script:
 
