@@ -25,17 +25,7 @@ Then install these extensions (Extensions block icon):
 
 Open VSCode -> File -> Preferences -> Settings -> Open Settings (JSON). Clean the entire JSON and copy/paste the below script:
 
-{ 
-    "terminal.integrated.profiles.windows": { 
-        "msys2": { 
-            "path": "C:\\MinGW\\msys\\1.0\\msys.bat", 
-            "args": [] 
-        } 
-    }, 
-    "terminal.external.windowsExec": "C:\\MinGW\\msys\\1.0\\msys.bat", 
-	"terminal.explorerKind": "external", 
-	"C_Cpp.updateChannel": "Insiders" 
-}
+{ "terminal.integrated.profiles.windows": { "msys2": { "path": "C:\\MinGW\\msys\\1.0\\msys.bat", "args": [] } }, "terminal.external.windowsExec": "C:\\MinGW\\msys\\1.0\\msys.bat", "terminal.explorerKind": "external", "C_Cpp.updateChannel": "Insiders" }
 
 Then File -> Save, then close. 
 
