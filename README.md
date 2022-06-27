@@ -16,7 +16,7 @@ https://bitbucket.org/Coto88/newlib-nds
 
 Once installed you should have MSYS2 available (required)
 
-Download & Install latest VSCode 
+Download & Install the bundled VSCode in the bin folder
 Then install these extensions (Extensions block icon):
 - C/C++
 - C/C++ Extension Pack
