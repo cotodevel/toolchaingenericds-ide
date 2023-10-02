@@ -8,11 +8,15 @@ Features:
 	- C++ IDE with Intellisense support 
 	- Enables full-debugging capabilities by using VSCode. Includes building TGDS Projects from VSCode by just pressing F5. 
 
+[Warning]
+	If you already have Ubuntu on WSL2, use another distro to set up TGDS, otherwise you'll lose your distro and environment!
+	
 Setup:
 
 1) Open PowerShell as Administrator then write: 
-	- wsl --unregister ubuntu
-	- wsl --install -d Ubuntu
+	- wsl.exe --update
+	- wsl --unregister Ubuntu (or any other distro)
+	- wsl --install -d Ubuntu (or any other distro)
 
 2) Download & Install the bundled VSCode in the /bin folder
 
@@ -27,9 +31,9 @@ Setup:
 	-wsl -d Ubuntu
 	-code .
 	
-5) Once VSCode is connected to WSL:<Linux distro>, you'll need to create a folder, and copy the default Makefile provided in this repo inside that folder.
+5) Once VSCode is connected to WSL:<Linux distro>, you'll need to create a "new folder", and copy the default Makefile provided in this repo inside that folder.
 
-6) Then Right-click button on that folder, and select "Open in Integrated Terminal"
+6) Then Right-click button on "new folder", and select "Open in Integrated Terminal"
 
 7) Write in the terminal the following commands:
 	-make checkoutenvironment
@@ -41,10 +45,13 @@ Up to this point we're done, and from now on just follow the [Usage] instruction
 
 [Usage]
 1) Open PowerShell and write
-	-wsl -d Ubuntu
+	-wsl -d Ubuntu (or any other distro)
 	-code .
-	
-2) On VSCode Right-click button on that folder, and select "Open in Integrated Terminal", assumming you want to assemble ToolchainGenericDS-template NDS/TWL binary.
+
+2) 	On VSCode, Go to Remote Explorer icon, choose WSL Target: /home/{linux-id-user}/
+	Right-click on "Connect in Current Window"
+
+3) On VSCode, go back to Explorer icon, Right-click button on "new folder", and select "Open in Integrated Terminal", assumming you want to assemble ToolchainGenericDS-template NDS/TWL binary.
 	-git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-template.git
 	-cd toolchaingenericds-template
 	-make clean
