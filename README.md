@@ -57,6 +57,8 @@ Up to this point we're done, and from now on just follow the [Usage] instruction
 	-make clean
 	-make
 
+Note:
+If you want to assemble again newlib-nds and ToolchainGenericDS, go to 7) (except "-make checkoutall" step ) until here.
 
 [Remote debugging on NTR/TWL hardware]
 	Work in progress, see: https://bitbucket.org/Coto88/toolchaingenericds-ide/issues/1/implement-gdb-remote-debugger
