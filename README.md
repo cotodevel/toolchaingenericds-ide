@@ -1,45 +1,55 @@
 VSCode IDE + TGDS Support:
 ![ToolchainGenericDS](img/vscodeide.png)
 
-Features:
+OS Support: 
+	- WSL2 Ubuntu 20.04+ on Windows 10 *only*
 
-- C++ IDE with Intellisense support 
-- Real time trace-ability of TGDS components (either Toolchain or the TGDS project) such as include-function SDK methods scope, documentation
-- STDLIB/Newlib C++ resolve symbols in real time
+Features:
+	- C++ IDE with Intellisense support 
+	- Enables full-debugging capabilities by using VSCode. Includes building TGDS Projects from VSCode by just pressing F5. 
 
 Setup:
 
+1) Open PowerShell as Administrator then write: 
+	- wsl --unregister ubuntu
+	- wsl --install -d Ubuntu
 
-[Windows]
-You must compile newlib-nds first:
-https://bitbucket.org/Coto88/newlib-nds
+2) Download & Install the bundled VSCode in the /bin folder
 
-Once installed you should have MSYS2 available (required)
-
-Download & Install the bundled VSCode in the bin folder
-Then install these extensions (Extensions block icon):
+3) Open VSCode, go to Extensions block icon, and install the following extensions:
 - C/C++
 - C/C++ Extension Pack
 - C++ Intellisense
 - Arm Assembly
+- WSL
 
-Open VSCode -> File -> Preferences -> Settings -> Open Settings (JSON). Clean the entire JSON and copy/paste the below script:
+4)Close VSCode, then open PowerShell and write
+	-wsl -d Ubuntu
+	-code .
+	
+5) Once VSCode is connected to WSL:<Linux distro>, you'll need to create a folder, and copy the default Makefile provided in this repo inside that folder.
 
-{ "terminal.integrated.profiles.windows": { "msys2": { "path": "C:\\MinGW\\msys\\1.0\\msys.bat", "args": [] } }, "terminal.external.windowsExec": "C:\\MinGW\\msys\\1.0\\msys.bat", "terminal.explorerKind": "external", "C_Cpp.updateChannel": "Insiders" }
+6) Then Right-click button on that folder, and select "Open in Integrated Terminal"
 
-Then File -> Save, then close. 
-
-Up to this point we're done, and from now on just follow the [Usage] instructions to load TGDS Apps in the IDE.
+7) Write in the terminal the following commands:
+	-make checkoutenvironment
+	-make newlib
+	-make toolchaingenericds
+	-make checkoutall (this is optional, just retrieves all TGDS Projects from GIT into your environment)
+	
+Up to this point we're done, and from now on just follow the [Usage] instructions to compile & debug natively TGDS Apps in the IDE.
 
 [Usage]
-- Explorer -> Open Folder: Choose either TGDS or TGDS Project base folder and it should open.
-- To compile TGDS / TGDS Projects and generate TGDS Apps click: 
-  -> Terminal
-  and a new msys2 terminal should open. You can now do the usual steps to build a TGDS Project: "cd <PathToTGDSProject>", then "make clean", then "make".
+1) Open PowerShell and write
+	-wsl -d Ubuntu
+	-code .
+	
+2) On VSCode Right-click button on that folder, and select "Open in Integrated Terminal", assumming you want to assemble ToolchainGenericDS-template NDS/TWL binary.
+	-git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-template.git
+	-cd toolchaingenericds-template
+	-make clean
+	-make
 
 
-Todo:
-- Linux support
-- Full source level debugging Remote GDB (real hardware and emulator) implemented and integrated in the IDE first, 
-and while I do have Remote GDB enabled in TGDS projects, a severe rewrite of TGDS pieces is actually required in order to hook the debugger into the same MSYS2 console 
-pipeline, which would enable both TGDS building and hooking a process to it in the same action.
+[Remote debugging on NTR/TWL hardware]
+	Work in progress, see: https://bitbucket.org/Coto88/toolchaingenericds-ide/issues/1/implement-gdb-remote-debugger
