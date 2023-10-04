@@ -28,6 +28,9 @@ export COMMITMSG		:= -update TGDS project to TGDS 1.65 SDK Commit: https://bitbu
 all: help
 
 #Make
+toolchaingenericds:
+	$(MAKE)	-R	-C	$(TOOLCHAIN_DIR)/
+
 tgdsproject:
 	$(MAKE)	-R	-C	$(TOOLCHAIN_DIR)/
 	$(MAKE)	-R	-C	$(PROY_DIR)/
