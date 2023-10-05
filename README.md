@@ -56,9 +56,11 @@ Up to this point we're done, and from now on just follow the [Usage] instruction
 	-wsl -d Ubuntu (or any other distro)
 	-exit
 
-2) Don't close PowerShell, and execute IN ORDER, the following powershell script in this repo (required for NDS Wifi to see WSL network)
-	-.\ds_bridge.ps1 (can also be ran through the right-click mouse button "Run with Powershell")
+2) Don't close PowerShell, and execute IN ORDER, the following script in this repo. Required for NDS Wifi to see WSL network.
+	-WSL2.cmd (right-click mouse button "Run as administrator")
 	-code .
+	-netsh interface portproxy show v4tov4 (you should see 1040 port mapped to localhost)
+	![ToolchainGenericDS](img/port_forward_tgds.png)
 	-exit
 	
 3) On VSCode, Go to Remote Explorer icon, choose WSL Target: /home/{linux-id-user}/
