@@ -14,6 +14,7 @@ Features:
 Setup:
 
 1) Open PowerShell as Administrator then write: 
+	- Set-ExecutionPolicy RemoteSigned
 	- wsl.exe --update
 	- wsl --unregister Ubuntu (or any other distro)
 	- wsl --install -d Ubuntu (or any other distro)
@@ -53,12 +54,17 @@ Up to this point we're done, and from now on just follow the [Usage] instruction
 [Usage]
 1) Open PowerShell and write
 	-wsl -d Ubuntu (or any other distro)
-	-code .
+	-exit
 
-2) 	On VSCode, Go to Remote Explorer icon, choose WSL Target: /home/{linux-id-user}/
+2) Don't close PowerShell, and execute IN ORDER, the following powershell script in this repo (required for NDS Wifi to see WSL network)
+	-.\ds_bridge.ps1 (can also be ran through the right-click mouse button "Run with Powershell")
+	-code .
+	-exit
+	
+3) On VSCode, Go to Remote Explorer icon, choose WSL Target: /home/{linux-id-user}/
 	Right-click on "Connect in Current Window"
 
-3) On VSCode, go back to Explorer icon, Right-click button on "new folder", and select "Open in Integrated Terminal", assumming you want to assemble ToolchainGenericDS-template NDS/TWL binary.
+4) On VSCode, go back to Explorer icon, Right-click button on "new folder", and select "Open in Integrated Terminal", assumming you want to assemble ToolchainGenericDS-template NDS/TWL binary.
 	-git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-template.git
 	-cd toolchaingenericds-template
 	-make clean
