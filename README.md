@@ -38,8 +38,12 @@ Shell should be @ Ubuntu Virtual Machine now, now write the following commands:
 Note: If you aren't getting a "Trust the authors" pop-up (and clicking trust always checkbox), retry 4) until you get the pop up.
 
 5) Once VSCode is connected to WSL:<Linux distro>, you'll need to go to Remote Explorer icon, choose WSL Target: /home/{linux-id-user}/
-	Right-click on "Connect in Current Window"
-
+	Right-click on "Connect in Current Window".
+	
+   Open ~/.bashrc file in current directory, at the end, press <enter> and add the following string:
+   export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+   Close local ~/.bashrc in current directory, save changes. Reboot Windows (yes, the entire system), then proceed to 4), except this step, and continue.
+   
 6) Create a "new folder", and copy the default Makefile provided in this repo inside that folder. Then Right-click button on "new folder", and select "Open in Integrated Terminal"
 
 7) Write in the terminal the following commands:
