@@ -103,7 +103,11 @@ checkoutall:
 	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-unittest.git	$(CURDIR)/ToolchainGenericDS-UnitTest
 	git clone https://Coto88@bitbucket.org/Coto88/blender-nds-exporter.git	$(CURDIR)/blender-nds-exporter
 	git clone https://Coto88@bitbucket.org/Coto88/cgmodels.git	$(CURDIR)/cgmodels
-	
+	git clone https://Coto88@bitbucket.org/Coto88/tgdsproject3d.git	$(CURDIR)/tgdsproject3d
+	git clone https://Coto88@bitbucket.org/Coto88/snakegl.git	$(CURDIR)/snakegl
+	git clone https://Coto88@bitbucket.org/Coto88/aquariumgl.git	$(CURDIR)/aquariumgl
+	git clone https://Coto88@bitbucket.org/Coto88/batallionnds.git	$(CURDIR)/batallionnds
+	git clone https://Coto88@bitbucket.org/Coto88/snemulds.git	$(CURDIR)/snemulds
 rebaseall:
 	$(MAKE)	rebase	-C	$(CURDIR)/armv4core/
 	$(MAKE)	rebase	-C	$(CURDIR)/gbaARMHook/
