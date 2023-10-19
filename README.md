@@ -52,7 +52,9 @@ Note: If you aren't getting a "Trust the authors" pop-up (and clicking trust alw
 	-make newlib
 	-make toolchaingenericds
 	-make checkoutall (this is optional, just retrieves all TGDS Projects from GIT into your environment)
-	
+
+8) Limit how much memory WSL2 takes: Open "Run as" or Win + R shortcut, paste "%UserProfile%" without commas, <enter> and copy .wslconfig into that folder. Reboot windows.
+
 Up to this point we're done, and from now on just follow the [Usage] instructions to compile & debug natively TGDS Apps in the IDE.
 
 [Usage]
