@@ -1,0 +1,4 @@
+[wsl2]
+memory=2GB  # Any size you feel like (must be an integer!)
+swap=0
+localhostForwarding=true
