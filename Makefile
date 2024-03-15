@@ -19,8 +19,8 @@
 
 NEWLIB2_NTR 	=	$(CURDIR)/newlib-nds/newlib-nds
 TOOLCHAIN_DIR 	= $(CURDIR)/ToolchainGenericDS
-PROY_DIR		= $(CURDIR)/aquariumgl
-PROY_DIR2		= $(CURDIR)/batallionnds
+PROY_DIR		= $(CURDIR)/ToolchainGenericDS-multiboot
+PROY_DIR2		= $(CURDIR)/gbaarmhook
 
 #Automated Commit message
 export COMMITMSG		:= -update TGDS project to TGDS 1.65 SDK Commit: https://bitbucket.org/Coto88/toolchaingenericds/commits/ca96219bc267899ca2307e6739841669f213b86b
@@ -69,7 +69,13 @@ makeall:
 	$(MAKE)	-R	-C	$(CURDIR)/ToolchainGenericDS-argvtest/
 	$(MAKE)	-R	-C	$(CURDIR)/ToolchainGenericDS-OnlineApp/
 	$(MAKE)	-R	-C	$(CURDIR)/ToolchainGenericDS-UnitTest/
-	
+	$(MAKE)	-R	-C	$(CURDIR)/cgmodels/
+	$(MAKE)	-R	-C	$(CURDIR)/tgdsproject3d/
+	$(MAKE)	-R	-C	$(CURDIR)/snakegl/
+	$(MAKE)	-R	-C	$(CURDIR)/aquariumgl/
+	$(MAKE)	-R	-C	$(CURDIR)/batallionnds/
+	$(MAKE)	-R	-C	$(CURDIR)/snemulds/
+
 cleanall:
 	$(MAKE)	clean	-C	$(TOOLCHAIN_DIR)/
 	$(MAKE)	clean	-C	$(CURDIR)/armv4core/
@@ -84,6 +90,12 @@ cleanall:
 	$(MAKE)	clean	-C	$(CURDIR)/ToolchainGenericDS-argvtest/
 	$(MAKE)	clean	-C	$(CURDIR)/ToolchainGenericDS-OnlineApp/
 	$(MAKE)	clean	-C	$(CURDIR)/ToolchainGenericDS-UnitTest/
+	$(MAKE)	clean	-C	$(CURDIR)/cgmodels/
+	$(MAKE)	clean	-C	$(CURDIR)/tgdsproject3d/
+	$(MAKE)	clean	-C	$(CURDIR)/snakegl/
+	$(MAKE)	clean	-C	$(CURDIR)/aquariumgl/
+	$(MAKE)	clean	-C	$(CURDIR)/batallionnds/
+	$(MAKE)	clean	-C	$(CURDIR)/snemulds/
 	
 	
 checkoutall:
