@@ -28,6 +28,17 @@ export COMMITMSG		:= -update TGDS project to TGDS 1.65 SDK Commit: https://bitbu
 all: help
 
 #Make
+remoteboot:
+	$(MAKE)	-R	-C	$(TOOLCHAIN_DIR)/
+	$(MAKE)	-R	-C	$(PROY_DIR)/
+	$(MAKE)	remotebootNTR	-C	$(PROY_DIR)/
+
+remoteboot2:
+	$(MAKE)	-R	-C	$(TOOLCHAIN_DIR)/
+	$(MAKE)	-R	-C	$(PROY_DIR)/
+	$(MAKE)	-R	-C	$(PROY_DIR2)/
+	$(MAKE)	remotebootNTR	-C	$(PROY_DIR2)/
+	
 toolchaingenericds:
 	$(MAKE)	-R	-C	$(TOOLCHAIN_DIR)/
 
