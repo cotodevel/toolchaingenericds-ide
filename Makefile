@@ -23,7 +23,7 @@ PROY_DIR		= $(CURDIR)/ToolchainGenericDS-multiboot
 PROY_DIR2		= $(CURDIR)/gbaarmhook
 
 #Automated Commit message
-export COMMITMSG		:= -update TGDS project to TGDS 1.65 SDK Commit: https://bitbucket.org/Coto88/toolchaingenericds/commits/ca96219bc267899ca2307e6739841669f213b86b
+export COMMITMSG		:= -update TGDS project to TGDS 1.65 SDK Commit: <commit>
 
 all: help
 
@@ -110,27 +110,28 @@ cleanall:
 	
 	
 checkoutall:
-	git clone https://Coto88@bitbucket.org/Coto88/coto88.bitbucket.org.git $(CURDIR)/coto88.bitbucket.org
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-utils.git $(CURDIR)/ToolchainGenericDS-utils
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-filedownload.git $(CURDIR)/ToolchainGenericDS-filedownload
-	git clone https://Coto88@bitbucket.org/Coto88/armv4core.git $(CURDIR)/armv4core
-	git clone https://Coto88@bitbucket.org/Coto88/gbaarmhook.git $(CURDIR)/gbaARMHook
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-template.git $(CURDIR)/ToolchainGenericDS-template
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-zlib-example.git $(CURDIR)/ToolchainGenericDS-zlib-example
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-ftpserver.git $(CURDIR)/ToolchainGenericDS-FTPServer
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-multimediaplayer.git $(CURDIR)/ToolchainGenericDS-multimediaplayer
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-multiboot.git	$(CURDIR)/ToolchainGenericDS-multiboot
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-wmbhost.git	$(CURDIR)/ToolchainGenericDS-wmbhost
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-argvtest.git	$(CURDIR)/ToolchainGenericDS-argvtest
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-onlineapp.git	$(CURDIR)/ToolchainGenericDS-OnlineApp
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-unittest.git	$(CURDIR)/ToolchainGenericDS-UnitTest
-	git clone https://Coto88@bitbucket.org/Coto88/blender-nds-exporter.git	$(CURDIR)/blender-nds-exporter
-	git clone https://Coto88@bitbucket.org/Coto88/cgmodels.git	$(CURDIR)/cgmodels
-	git clone https://Coto88@bitbucket.org/Coto88/tgdsproject3d.git	$(CURDIR)/tgdsproject3d
-	git clone https://Coto88@bitbucket.org/Coto88/snakegl.git	$(CURDIR)/snakegl
-	git clone https://Coto88@bitbucket.org/Coto88/aquariumgl.git	$(CURDIR)/aquariumgl
-	git clone https://Coto88@bitbucket.org/Coto88/batallionnds.git	$(CURDIR)/batallionnds
-	git clone https://Coto88@bitbucket.org/Coto88/snemulds.git	$(CURDIR)/snemulds
+	git clone https://github.com/cotodevel/cotodevel.github.io.git $(CURDIR)/cotodevel.github.io
+	git clone https://github.com/cotodevel/toolchaingenericds-utils.git $(CURDIR)/ToolchainGenericDS-utils
+	git clone https://github.com/cotodevel/toolchaingenericds-filedownload.git $(CURDIR)/ToolchainGenericDS-filedownload
+	git clone https://github.com/cotodevel/armv4core.git $(CURDIR)/armv4core
+	git clone https://github.com/cotodevel/gbaarmhook.git $(CURDIR)/gbaARMHook
+	git clone https://github.com/cotodevel/toolchaingenericds-template.git $(CURDIR)/ToolchainGenericDS-template
+	git clone https://github.com/cotodevel/toolchaingenericds-zlib-example.git $(CURDIR)/ToolchainGenericDS-zlib-example
+	git clone https://github.com/cotodevel/toolchaingenericds-ftpserver.git $(CURDIR)/ToolchainGenericDS-FTPServer
+	git clone https://github.com/cotodevel/toolchaingenericds-multimediaplayer.git $(CURDIR)/ToolchainGenericDS-multimediaplayer
+	git clone https://github.com/cotodevel/toolchaingenericds-multiboot.git	$(CURDIR)/ToolchainGenericDS-multiboot
+	git clone https://github.com/cotodevel/toolchaingenericds-wmbhost.git	$(CURDIR)/ToolchainGenericDS-wmbhost
+	git clone https://github.com/cotodevel/toolchaingenericds-argvtest.git	$(CURDIR)/ToolchainGenericDS-argvtest
+	git clone https://github.com/cotodevel/toolchaingenericds-onlineapp.git	$(CURDIR)/ToolchainGenericDS-OnlineApp
+	git clone https://github.com/cotodevel/toolchaingenericds-unittest.git	$(CURDIR)/ToolchainGenericDS-UnitTest
+	git clone https://github.com/cotodevel/Coto88/blender-nds-exporter.git	$(CURDIR)/blender-nds-exporter
+	git clone https://github.com/cotodevel/Coto88/cgmodels.git	$(CURDIR)/cgmodels
+	git clone https://github.com/cotodevel/Coto88/tgdsproject3d.git	$(CURDIR)/tgdsproject3d
+	git clone https://github.com/cotodevel/Coto88/snakegl.git	$(CURDIR)/snakegl
+	git clone https://github.com/cotodevel/Coto88/aquariumgl.git	$(CURDIR)/aquariumgl
+	git clone https://github.com/cotodevel/Coto88/batallionnds.git	$(CURDIR)/batallionnds
+	git clone https://github.com/cotodevel/Coto88/snemulds.git	$(CURDIR)/snemulds
+	
 rebaseall:
 	$(MAKE)	rebase	-C	$(CURDIR)/armv4core/
 	$(MAKE)	rebase	-C	$(CURDIR)/gbaARMHook/
@@ -147,8 +148,8 @@ rebaseall:
 	
 	
 checkoutenvironment:
-	git clone https://Coto88@bitbucket.org/Coto88/newlib-nds.git $(CURDIR)/newlib-nds
-	git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds.git $(CURDIR)/ToolchainGenericDS
+	git clone https://github.com/cotodevel/newlib-nds.git $(CURDIR)/newlib-nds
+	git clone https://github.com/cotodevel/toolchaingenericds.git $(CURDIR)/ToolchainGenericDS
 
 updateall:
 	-mv	$(CURDIR)/ToolchainGenericDS-filedownload/ToolchainGenericDS-filedownload.nds	$(CURDIR)/ToolchainGenericDS-filedownload/release/arm7dldi-ntr/ToolchainGenericDS-filedownload.nds
@@ -260,8 +261,8 @@ help:
 	-@echo "MAKE cleannewlib: Clean newlib for NintendoDS (TGDS environment and TGDS projects require this first)"
 	-@echo "MAKE makeall: Builds TGDS environment + ALL TGDS projects (requires newlib for NintendoDS to be built first)"
 	-@echo "MAKE cleanall: Clean TGDS environment + ALL TGDS projects (requires newlib for NintendoDS to be built first)"
-	-@echo "MAKE checkoutenvironment: Uses GIT to fetch newlib for NintendoDS + TGDS from master branch from bitbucket"
-	-@echo "MAKE checkoutall: Uses GIT to fetch ALL TGDS projects from master branch from bitbucket"
+	-@echo "MAKE checkoutenvironment: Uses GIT to fetch newlib for NintendoDS + TGDS from master branch from Github"
+	-@echo "MAKE checkoutall: Uses GIT to fetch ALL TGDS projects from master branch from Github"
 	-@echo "MAKE rebaseall: Uses GIT to force/clean/discard any local changes while restoring TGDS projects from origin (regardless the branch it is)"
 	-@echo "MAKE updateall: All freshly built TGDS projects (ARM7DLDI) will be updated in their respective /release/arm7dldi-ntr folder"
 	-@echo "MAKE commitall: Commit all modified/changes in TGDS projects using a global commit message"

@@ -73,7 +73,7 @@ Up to this point we're done, and from now on just follow the [Usage] instruction
 	Right-click on "Connect in Current Window"
 
 4) On VSCode, go back to Explorer icon, Right-click button on "new folder", and select "Open in Integrated Terminal", assumming you want to assemble ToolchainGenericDS-template NDS/TWL binary.
-	-git clone https://Coto88@bitbucket.org/Coto88/toolchaingenericds-template.git
+	-git clone https://github.com/cotodevel/toolchaingenericds-template.git
 	-cd toolchaingenericds-template
 	-make clean
 	-make
@@ -82,4 +82,4 @@ Note:
 If you want to assemble again newlib-nds and ToolchainGenericDS, go to 7) (except "-make checkoutall" step ) until here.
 
 [Remote debugging on NTR/TWL hardware]
-	Work in progress, see: https://bitbucket.org/Coto88/toolchaingenericds-ide/issues/1/implement-gdb-remote-debugger
+	Work in progress, see: https://github.com/cotodevel/toolchaingenericds-ide/issues/1
