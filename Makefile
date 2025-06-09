@@ -20,7 +20,7 @@
 NEWLIB2_NTR 	=	$(CURDIR)/newlib-nds/newlib-nds
 TOOLCHAIN_DIR 	= $(CURDIR)/ToolchainGenericDS
 PROY_DIR		= $(CURDIR)/ToolchainGenericDS-multiboot
-PROY_DIR2		= $(CURDIR)/gbaarmhook
+PROY_DIR2		= $(CURDIR)/ToolchainGenericDS-template
 
 #Automated Commit message
 export COMMITMSG		:= -update TGDS project to TGDS 1.65 SDK Commit: <commit>
@@ -124,13 +124,13 @@ checkoutall:
 	git clone https://github.com/cotodevel/toolchaingenericds-argvtest.git	$(CURDIR)/ToolchainGenericDS-argvtest
 	git clone https://github.com/cotodevel/toolchaingenericds-onlineapp.git	$(CURDIR)/ToolchainGenericDS-OnlineApp
 	git clone https://github.com/cotodevel/toolchaingenericds-unittest.git	$(CURDIR)/ToolchainGenericDS-UnitTest
-	git clone https://github.com/cotodevel/Coto88/blender-nds-exporter.git	$(CURDIR)/blender-nds-exporter
-	git clone https://github.com/cotodevel/Coto88/cgmodels.git	$(CURDIR)/cgmodels
-	git clone https://github.com/cotodevel/Coto88/tgdsproject3d.git	$(CURDIR)/tgdsproject3d
-	git clone https://github.com/cotodevel/Coto88/snakegl.git	$(CURDIR)/snakegl
-	git clone https://github.com/cotodevel/Coto88/aquariumgl.git	$(CURDIR)/aquariumgl
-	git clone https://github.com/cotodevel/Coto88/batallionnds.git	$(CURDIR)/batallionnds
-	git clone https://github.com/cotodevel/Coto88/snemulds.git	$(CURDIR)/snemulds
+	git clone https://github.com/cotodevel/blender-nds-exporter.git	$(CURDIR)/blender-nds-exporter
+	git clone https://github.com/cotodevel/cgmodels.git	$(CURDIR)/cgmodels
+	git clone https://github.com/cotodevel/tgdsproject3d.git	$(CURDIR)/tgdsproject3d
+	git clone https://github.com/cotodevel/snakegl.git	$(CURDIR)/snakegl
+	git clone https://github.com/cotodevel/aquariumgl.git	$(CURDIR)/aquariumgl
+	git clone https://github.com/cotodevel/batallionnds.git	$(CURDIR)/batallionnds
+	git clone https://github.com/cotodevel/snemulds.git	$(CURDIR)/snemulds
 	
 rebaseall:
 	$(MAKE)	rebase	-C	$(CURDIR)/armv4core/
