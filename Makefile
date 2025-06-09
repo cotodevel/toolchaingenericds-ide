@@ -190,8 +190,13 @@ updateall:
 
 switchstable:
 	$(MAKE)	switchStable	-C	$(CURDIR)/ToolchainGenericDS/
+	$(MAKE)	switchStable	-C	$(CURDIR)/aquariumgl/
 	$(MAKE)	switchStable	-C	$(CURDIR)/armv4core/
+	$(MAKE)	switchStable	-C	$(CURDIR)/batallionnds/
+	$(MAKE)	switchStable	-C	$(CURDIR)/cgmodels/
 	$(MAKE)	switchStable	-C	$(CURDIR)/gbaARMHook/
+	$(MAKE)	switchStable	-C	$(CURDIR)/snakegl/
+	$(MAKE)	switchStable	-C	$(CURDIR)/tgdsproject3d/
 	$(MAKE)	switchStable	-C	$(CURDIR)/ToolchainGenericDS-FTPServer/
 	$(MAKE)	switchStable	-C	$(CURDIR)/ToolchainGenericDS-filedownload/
 	$(MAKE)	switchStable	-C	$(CURDIR)/ToolchainGenericDS-template/
@@ -202,12 +207,18 @@ switchstable:
 	$(MAKE)	switchStable	-C	$(CURDIR)/ToolchainGenericDS-argvtest/
 	$(MAKE)	switchStable	-C	$(CURDIR)/ToolchainGenericDS-OnlineApp/
 	$(MAKE)	switchStable	-C	$(CURDIR)/ToolchainGenericDS-UnitTest/
+	$(MAKE)	switchStable	-C	$(CURDIR)/ToolchainGenericDS-utils/
 	$(MAKE)	switchStable	-C	$(CURDIR)/snemulds/
 
 switchmaster:
 	$(MAKE)	switchMaster	-C	$(CURDIR)/ToolchainGenericDS/
+	$(MAKE)	switchMaster	-C	$(CURDIR)/aquariumgl/
 	$(MAKE)	switchMaster	-C	$(CURDIR)/armv4core/
+	$(MAKE)	switchMaster	-C	$(CURDIR)/batallionnds/
+	$(MAKE)	switchMaster	-C	$(CURDIR)/cgmodels/
 	$(MAKE)	switchMaster	-C	$(CURDIR)/gbaARMHook/
+	$(MAKE)	switchMaster	-C	$(CURDIR)/snakegl/
+	$(MAKE)	switchMaster	-C	$(CURDIR)/tgdsproject3d/
 	$(MAKE)	switchMaster	-C	$(CURDIR)/ToolchainGenericDS-FTPServer/
 	$(MAKE)	switchMaster	-C	$(CURDIR)/ToolchainGenericDS-filedownload/
 	$(MAKE)	switchMaster	-C	$(CURDIR)/ToolchainGenericDS-template/
@@ -218,6 +229,7 @@ switchmaster:
 	$(MAKE)	switchMaster	-C	$(CURDIR)/ToolchainGenericDS-argvtest/
 	$(MAKE)	switchMaster	-C	$(CURDIR)/ToolchainGenericDS-OnlineApp/
 	$(MAKE)	switchMaster	-C	$(CURDIR)/ToolchainGenericDS-UnitTest/
+	$(MAKE)	switchMaster	-C	$(CURDIR)/ToolchainGenericDS-utils/
 	$(MAKE)	switchMaster	-C	$(CURDIR)/snemulds/
 	
 commitenvironment:
@@ -225,32 +237,48 @@ commitenvironment:
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS/src/
 
 commitall:
+	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS/
+	$(MAKE)	commitChanges	-C	$(CURDIR)/aquariumgl/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/armv4core/
+	$(MAKE)	commitChanges	-C	$(CURDIR)/batallionnds/
+	$(MAKE)	commitChanges	-C	$(CURDIR)/cgmodels/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/gbaARMHook/
+	$(MAKE)	commitChanges	-C	$(CURDIR)/snakegl/
+	$(MAKE)	commitChanges	-C	$(CURDIR)/tgdsproject3d/
+	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-FTPServer/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-filedownload/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-template/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-zlib-example/
-	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-FTPServer/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-multimediaplayer/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-multiboot/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-wmbhost/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-argvtest/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-OnlineApp/
 	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-UnitTest/
+	$(MAKE)	commitChanges	-C	$(CURDIR)/ToolchainGenericDS-utils/
+	$(MAKE)	commitChanges	-C	$(CURDIR)/snemulds/
 
 buildpkgs:
+	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS/lib/Woopsi/woopsiExamples/demoWoopsi/
+	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/aquariumgl/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/armv4core/
+	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/batallionnds/
+	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/cgmodels/targetClientRenderers/NintendoDS/Env_Mapping/
+	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/cgmodels/targetClientRenderers/NintendoDS/TexturedBlenderModelNDSRender/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/gbaARMHook/
+	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/snakegl/
+	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/tgdsproject3d/
+	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-FTPServer/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-filedownload/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-template/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-zlib-example/
-	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-FTPServer/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-multimediaplayer/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-multiboot/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-wmbhost/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-argvtest/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-OnlineApp/
 	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/ToolchainGenericDS-UnitTest/
+	$(MAKE)	BuildTGDSPKG	-C	$(CURDIR)/snemulds/
 	
 help:
 	-@echo "MAKE tgdsproject: Builds TGDS environment + a given TGDS project (requires newlib for NintendoDS to be built first)"
