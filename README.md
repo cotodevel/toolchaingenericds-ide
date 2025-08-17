@@ -2,7 +2,7 @@ VSCode IDE + TGDS Support:
 ![ToolchainGenericDS](img/vscodeide.png)
 
 OS Support: 
-	- WSL2 Ubuntu 20.04+ on Windows 10 *only*
+	- WSL2 Ubuntu 20.04+ on Windows 10 (x64) or Windows 11 (x64)
 
 Features:
 	- C++ IDE with Intellisense support 
