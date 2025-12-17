@@ -24,7 +24,6 @@ Setup:
 3) Open VSCode, go to Extensions block icon, and install the following extensions:
 - C/C++
 - C/C++ Extension Pack
-- C++ Intellisense
 - Arm Assembly
 - WSL
 
